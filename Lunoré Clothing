@@ -1,0 +1,391 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lunoré Clothing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:#fff;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(10px);
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+border-bottom:1px solid #222;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.logo h2{
+font-size:1.4rem;
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 60px;
+background:
+linear-gradient(to bottom,rgba(0,0,0,.65),rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1400');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:10px;
+}
+
+.hero-content p{
+font-size:1.2rem;
+color:#cfcfcf;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#d4af37;
+color:black;
+font-weight:600;
+border-radius:40px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.section-title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:40px;
+}
+
+.product{
+padding:90px 8%;
+}
+
+.product-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.product-image img{
+width:100%;
+border-radius:20px;
+background:#111;
+}
+
+.product-info h2{
+font-size:2.5rem;
+margin-bottom:10px;
+}
+
+.price{
+font-size:2rem;
+color:#d4af37;
+margin:20px 0;
+}
+
+.size-box{
+margin:20px 0;
+}
+
+.size-box button{
+padding:10px 18px;
+margin-right:10px;
+border:none;
+border-radius:8px;
+background:#222;
+color:white;
+cursor:pointer;
+}
+
+.cart-btn{
+padding:14px 30px;
+background:#d4af37;
+border:none;
+font-size:1rem;
+font-weight:600;
+border-radius:30px;
+cursor:pointer;
+}
+
+.about{
+padding:90px 8%;
+background:#111;
+text-align:center;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#d0d0d0;
+}
+
+.reviews{
+padding:90px 8%;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review{
+background:#151515;
+padding:25px;
+border-radius:15px;
+border:1px solid #222;
+}
+
+.review h4{
+margin-bottom:10px;
+color:#d4af37;
+}
+
+.contact{
+padding:90px 8%;
+text-align:center;
+background:#111;
+}
+
+.contact a{
+color:#d4af37;
+text-decoration:none;
+}
+
+.instagram-btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:#d4af37;
+color:black;
+font-weight:600;
+border-radius:30px;
+text-decoration:none;
+}
+
+footer{
+padding:25px;
+text-align:center;
+background:black;
+border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2.6rem;
+}
+
+.product-box{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<img src="https://i.ibb.co/dwXt9nK0/104-FAF3-D-F988-42-E1-98-C8-F550-F2618-E96.jpg">
+<h2>Lunoré</h2>
+</div>
+
+<nav>
+<a href="#product">Product</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>Lunoré Clothing</h1>
+<p>Wear Your Presence.</p>
+<a href="#product" class="btn">Shop Collection</a>
+</div>
+
+</section>
+
+<section class="product" id="product">
+
+<h2 class="section-title">Featured Product</h2>
+
+<div class="product-box">
+
+<div class="product-image">
+<img src="https://i.ibb.co/ksgs815m/16-F85-D3-B-8278-418-E-86-E0-96-D0-BF8902-E3.png">
+</div>
+
+<div class="product-info">
+
+<h2>The Boys Special Edition</h2>
+
+<p>
+Premium oversized graphic tee inspired by modern streetwear aesthetics.
+Built for comfort, confidence and everyday style.
+</p>
+
+<div class="price">₹699</div>
+
+<div class="size-box">
+<p>Select Size</p><br>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+</div>
+
+<button class="cart-btn" onclick="addCart()">
+Add To Cart
+</button>
+
+<p id="cartmsg" style="margin-top:15px;"></p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<h2 class="section-title">About Lunoré</h2>
+
+<p>
+Lunoré Clothing is built for those who appreciate bold aesthetics,
+clean streetwear and timeless fashion. Every piece is designed to
+bring confidence, individuality and premium quality into everyday wear.
+Our vision is simple — create clothing that feels exclusive,
+modern and effortlessly stylish.
+</p>
+
+</section>
+
+<section class="reviews" id="reviews">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review">
+<h4>⭐⭐⭐⭐⭐ Aryan</h4>
+<p>Amazing quality. The print looks premium and fits perfectly.</p>
+</div>
+
+<div class="review">
+<h4>⭐⭐⭐⭐⭐ Rohan</h4>
+<p>Best oversized t-shirt I've purchased recently.</p>
+</div>
+
+<div class="review">
+<h4>⭐⭐⭐⭐⭐ Dev</h4>
+<p>Great fabric quality and aesthetic design.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Connect With Us</h2>
+
+<p>
+Email:
+<a href="mailto:lunoreclothing@gmail.com">
+lunoreclothing@gmail.com
+</a>
+</p>
+
+<a class="instagram-btn"
+href="https://www.instagram.com/lunore.clothing"
+target="_blank">
+Visit Instagram
+</a>
+
+</section>
+
+<footer>
+© 2025 Lunoré Clothing. All Rights Reserved.
+</footer>
+
+<script>
+
+function addCart(){
+document.getElementById("cartmsg").innerHTML =
+"✓ Product added to cart";
+}
+
+</script>
+
+</body>
+</html>
