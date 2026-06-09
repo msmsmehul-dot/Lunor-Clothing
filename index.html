@@ -1,19 +1,58 @@
+<div class="product-info">
+
+<h2>The Boys Special Edition</h2>
+
+<p>
+Premium oversized graphic tee inspired by modern streetwear aesthetics.
+Built for comfort, confidence and everyday style.
+</p>
+
+<div class="price">₹699</div>
+
+<div class="size-box">
+<p>Select Size</p><br>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+</div>
+
 <button class="cart-btn" onclick="addCart()">
 Add To Cart
 </button>
 
 <p id="cartmsg" style="margin-top:15px;"></p>
-<div style="margin:20px 0;">
+
+</div><div class="product-info">
+
+<h2>The Boys Special Edition</h2>
+
+<p>
+Premium oversized graphic tee inspired by modern streetwear aesthetics.
+Built for comfort, confidence and everyday style.
+</p>
+
+<div class="price">₹699</div>
+
+<div class="size-box">
+<p>Select Size</p><br>
+
+<button onclick="selectSize(this)">M</button>
+<button onclick="selectSize(this)">L</button>
+<button onclick="selectSize(this)">XL</button>
+
+</div>
+
+<br>
 
 <p>Select Quantity</p><br>
 
 <select style="
-padding:10px;
-border-radius:8px;
+padding:12px;
 background:#222;
 color:white;
 border:none;
-width:120px;">
+border-radius:10px;
+width:140px;">
 
 <option>1</option>
 <option>2</option>
@@ -22,14 +61,13 @@ width:120px;">
 
 </select>
 
-</div>
+<br><br>
 
-<p style="
-color:#d4af37;
-font-weight:600;
-margin:15px 0;">
+<p style="color:#d4af37;font-weight:600;">
 UPI ID: 8720073628-2@ybl
 </p>
+
+<br>
 
 <a href="upi://pay?pa=8720073628-2@ybl&pn=LunoreClothing&am=699"
 class="btn">
@@ -37,12 +75,6 @@ Pay ₹699 Now
 </a>
 
 <br><br>
-
-<p style="color:#ccc;">
-Complete payment first, then fill the order form.
-</p>
-
-<br>
 
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeyVts25iBNbUwU5VaFpGaDb5rboMWPJSriRn6SQNKSMShIg/viewform"
 class="btn"
@@ -55,49 +87,24 @@ Fill Order Form
 <p style="font-size:14px;color:#999;">
 No Return / No Refund<br>
 Delivery Available Across India
-</p><script>
+</p>
 
-function addCart(){
-document.getElementById("cartmsg").innerHTML =
-"✓ Product added to cart";
-}
+</div><script>
 
-</script><script>
+function selectSize(btn){
 
-// Size Selection Highlight
+document
+.querySelectorAll('.size-box button')
+.forEach(button=>{
 
-const sizeButtons =
-document.querySelectorAll('.size-box button');
-
-sizeButtons.forEach(button => {
-
-button.addEventListener('click', () => {
-
-sizeButtons.forEach(btn => {
-btn.style.background = '#222';
-btn.style.color = 'white';
-});
-
-button.style.background = '#d4af37';
-button.style.color = 'black';
+button.style.background="#222";
+button.style.color="white";
 
 });
 
-});
+btn.style.background="#d4af37";
+btn.style.color="black";
 
-</script>.cart-btn{
-padding:16px 34px;
-background:#d4af37;
-border:none;
-font-size:1rem;
-font-weight:600;
-border-radius:40px;
-cursor:pointer;
-transition:.3s;
-box-shadow:0 0 25px rgba(212,175,55,.25);
 }
 
-.cart-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 0 30px rgba(212,175,55,.45);
-}
+</script>
